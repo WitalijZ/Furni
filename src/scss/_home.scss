@@ -1,1 +1,85 @@
 // Section HERO
+.section {
+
+    // .section__hero
+    &__hero {
+        padding-top: 90px;
+        background: #3B5D50;
+        @media (max-width: $breakpoint992) {
+            padding-top: 75px;
+        }
+        @media (max-width: $breakpoint768) {
+            padding-top: 50px;
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $breakpoint992) {
+        flex-wrap: wrap;
+    }
+
+    // .hero__item
+    &__item {
+        &.left__item {
+            flex: 0 1 420px;
+            @media (max-width: $breakpoint992) {
+                flex: 0 1 100%;
+            }
+        }
+
+        &.right__item {
+
+        }
+    }
+
+    // .hero__title
+    &__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 65px;
+        color: #FFFFFF;
+        span{
+            display: block;
+        }
+        @media (max-width: $breakpoint1200) {
+            font-size: 46px;
+            line-height: 1.3;
+        }
+        @media (max-width: $breakpoint992) {
+            font-size: 42px;
+        }
+        @media (max-width: $breakpoint768) {
+            font-size: 36px;
+        }
+    }
+
+    // .hero__buttons
+    &__buttons {
+        margin-top: 117px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        @media (max-width: $breakpoint992) {
+            margin-top: 75px;
+        }
+        @media (max-width: $breakpoint480) {
+            flex-wrap: wrap;
+            .hero__btn {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                
+            }
+        }
+        
+    }
+
+    // .hero__image
+    &__image {
+
+    }
+}

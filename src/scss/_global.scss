@@ -44,28 +44,41 @@ body {
     &.btn__hero {
         background: #F9BF29;
         color: #2F2F2F;
-    }
+        transition: 0.3s background, color;
 
-    &.btn__outline {
-        border: 2px solid rgba(255, 255, 255, 0.29);
-        color: yellowgreen;
-        background: transparent;
-
-        &.btn__section {
-            background: #2F2F2F;
+        &:hover {
+            background: darken(#F9BF29, 10);
             color: white;
         }
     }
 
-    // Animations
-    // Fade
-    @keyframes fade {
-        0% {
-            opacity: 0;
-        }
+    &.btn__outline {
+        border: 2px solid rgba(255, 255, 255, 0.29);
+        color: #ffffff;
+        background: transparent;
+        transition: 0.3s all;
 
-        100% {
-            opacity: 1;
+        &:hover {
+            background: #ffffff;
+            color: #2F2F2F;
+            border-color: #ffffff;
         }
+    }
+
+    &.btn__section {
+        background: #2F2F2F;
+        color: white;
+    }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
